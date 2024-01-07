@@ -15,12 +15,23 @@
   display: none;
 }
 
+@keyframes openingAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
 @media (max-width: 768px) {
   .links {
     display: none;
   }
   .mobileLinks {
+    animation: openingAnimation 0.4s normal;
     position: absolute;
+    background-color: #191829;
     top: 100px;
     right: 0;
     width: 50%;
@@ -30,7 +41,9 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    z-index: 999;
   }
+
   .menuButton {
     display: block;
     cursor: pointer;
